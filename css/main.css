@@ -100,8 +100,8 @@ textarea {
 
 /* TESTING NAV BAR CSS */
 .view {
-  background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")
-    no-repeat center center;
+  /* background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg") */
+  background: url("../img/image0.jpg") no-repeat center center;
   background-size: cover;
 }
 
