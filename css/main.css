@@ -98,34 +98,34 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   /* TESTING NAV BAR CSS */
-   .view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
-    background-size: cover;
-    }
+/* TESTING NAV BAR CSS */
+.view {
+  background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")
+    no-repeat center center;
+  background-size: cover;
+}
 
-    .navbar {
-        background-color: transparent;
-    }
+.navbar {
+  background-color: transparent;
+}
 
-    .top-nav-collapse {
-        background-color: #4285F4;
-    }
+.top-nav-collapse {
+  background-color: #2e3951;
+}
 
-    @media only screen and (max-width: 768px) {
-        .navbar {
-            background-color: #4285F4;
-        }
-    }
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #2e3951;
+  }
+}
 
-    html,
-    body,
-    header,
-    .view {
-      height: 100%;
-    }
-   /* TESTING NAV BAR CSS */
-
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+/* TESTING NAV BAR CSS */
 
 /* ==========================================================================
    Helper classes
@@ -292,4 +292,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
