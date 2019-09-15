@@ -70,7 +70,7 @@
                 <a class="nav-link" href="#resume">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Cotact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
     <main class="text-center py-5">
       <div class="container">
         <!-- Section Projects -->
-        <section id="projects" style="height:825px;">
+        <section id="projects" style="height:1650px;">
           <div class="row">
             <div class="col-md-12">
               <h2>Projects</h2>
@@ -127,7 +127,7 @@
         <!-- Section Projects -->
 
         <!-- Section Resume -->
-        <section id="resume" style="height:825px;">
+        <section id="resume" style="height:1650px;">
           <div class="row">
             <div class="col-md-12">
               <h2>Resume</h2>
@@ -155,7 +155,7 @@
         <!-- Section Work Experience (Resume) -->
 
         <!-- Section Contact -->
-        <section id="contact" style="height:825px;">
+        <section id="contact" style="height:1650px;">
           <div class="row">
             <div class="col-md-12">
               <h2>Contact</h2>
@@ -184,7 +184,9 @@
     <!--Main Layout-->
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="page-footer text-center font-small">
+      <div class="row">CONTENT HERE</div>
+    </footer>
     <!-- Footer -->
 
     <!-- SCRIPTS -->
@@ -233,7 +235,9 @@
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
 
+    <!-- jQuery  -->
     <script>
+      // Smooth Scroller
       $('a[href*="#"]').on("click", function(e) {
         e.preventDefault();
 
@@ -244,15 +248,45 @@
           500,
           "linear"
         );
+      });
 
-        // get scroll position of current section,
+      //Navbar active selector
+      // TODO: Change the offset of selector because right now we're direct scrollbar position.
+      $(window).scroll(function() {
+        let currentPos = $(window).scrollTop() + 60;
+        let projectsPos = $("#projects").position().top;
+        let resumePos = $("#resume").position().top;
+        let contactPos = $("#contact").position().top;
 
-        // On document.load - once page is loaded
-        $("section #id").get();
+        if (currentPos >= projectsPos && currentPos < resumePos) {
+          $('a[href*="#project"]')
+            .parent()
+            .addClass("active");
+        } else {
+          $('a[href*="#project"]')
+            .parent()
+            .removeClass("active");
+        }
 
-        // get all scrollpositions of each section
+        if (currentPos >= resumePos && currentPos < contactPos) {
+          $('a[href*="#resume"]')
+            .parent()
+            .addClass("active");
+        } else {
+          $('a[href*="#resume"]')
+            .parent()
+            .removeClass("active");
+        }
 
-        //  based on scroll position add active class to navbar element.
+        if (currentPos >= contactPos) {
+          $('a[href*="#contact"]')
+            .parent()
+            .addClass("active");
+        } else {
+          $('a[href*="#contact"]')
+            .parent()
+            .removeClass("active");
+        }
       });
     </script>
   </body>

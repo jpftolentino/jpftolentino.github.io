@@ -98,7 +98,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* TESTING NAV BAR CSS */
+/* NAVBAR AND BG CSS */
 .view {
   /* background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg") */
   background: url("../img/image0.jpg") no-repeat center center;
@@ -125,7 +125,12 @@ header,
 .view {
   height: 100%;
 }
-/* TESTING NAV BAR CSS */
+
+/* FOOTER CSS */
+
+footer {
+  background-color: #2e3951;
+}
 
 /* ==========================================================================
    Helper classes
